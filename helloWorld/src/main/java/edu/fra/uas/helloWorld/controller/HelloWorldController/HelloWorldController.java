@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 @Controller
 public class HelloWorldController {
 
-    @RequestMapping(value="/x", method=RequestMethod.GET)
+    @RequestMapping(value="/", method=RequestMethod.GET)
     @ResponseBody
     public String getHelloWorld() {
         return "<h1>Hello World in Spring Boot 2024!</h1>";
