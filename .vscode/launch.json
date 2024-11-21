@@ -2,6 +2,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "NotendurchschnittBerechnenApplication",
+            "request": "launch",
+            "mainClass": "edu.fra.uas.NotendurchschnittBerechnen.NotendurchschnittBerechnenApplication",
+            "projectName": ""
+        },
+        {
+            "type": "java",
+            "name": "NotendurchschnittApplication",
+            "request": "launch",
+            "mainClass": "edu.fra.uas.notendurchschnitt.NotendurchschnittApplication",
+            "projectName": "notendurchschnitt"
+        },
+        {
+            "type": "java",
             "name": "Spring Boot-DemoApplication<demo>",
             "request": "launch",
             "cwd": "${workspaceFolder}",
