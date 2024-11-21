@@ -2,6 +2,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "NotendurchschnittApplication",
+            "request": "launch",
+            "mainClass": "com.example.Notendurchschnitt.NotendurchschnittApplication",
+            "projectName": "Notendurchschnitt"
+        },
+        {
+            "type": "java",
             "name": "NotendurchschnittBerechnenApplication",
             "request": "launch",
             "mainClass": "edu.fra.uas.NotendurchschnittBerechnen.NotendurchschnittBerechnenApplication",
