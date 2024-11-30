@@ -28,6 +28,7 @@ public class NotenService {
     }
 
     public void addNote(double note) {
+        
         noten.add(note);
     }
 
