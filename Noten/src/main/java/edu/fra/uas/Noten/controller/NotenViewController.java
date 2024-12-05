@@ -47,12 +47,18 @@ public class NotenViewController {
         return "index";
     }
 
-    @DeleteMapping("/delete/{id}")
+    @PostMapping("/delete/{id}")
     public String deleteNote(@PathVariable("id") int id) {
         List<Double> notenListe = notenService.getNotenliste();
         if(id >= 0 && id < notenListe.size()) {
             notenService.deleteNote(id);
         }
+        return "redirect:/list";
+    }
+
+    @GetMapping("/delete")
+    public String deleteNote(Model model) {
+        model.addAttribute("noten", notenService.getNotenliste());
         return "delete";
     }
 }

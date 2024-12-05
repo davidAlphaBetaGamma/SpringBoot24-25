@@ -11,16 +11,15 @@
 
 <body>
     <!-- Notenliste anzeigen -->
-    <h2>Notenliste</h2>
+    <h2>Note löschen</h2>
     <ul>
         <li th:each="note, iterStat: ${noten}">
             <span th:text="'Note ' + ${iterStat.index + 1} + ': ' + ${note}"></span>
             <form th:action="@{/delete/{id}(id=${iterStat.index})}" method="post">
-                <input type="hidden" name="_method" value="delete" />
                 <button type="submit">Löschen</button>
             </form>
         </li>
     </ul>
-    <a th:href="@{/}" 
+    <a th:href="@{/list}">Zurück zur Liste</a>
 </body>
 </html>
