@@ -6,6 +6,7 @@ import org.slf4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -25,20 +26,20 @@ public class NotenViewController {
     private NotenService notenService;
 
 
-    @RequestMapping
+    @GetMapping("/")
     public String get() {
      log.debug("get() is called");
-     return "index.html";  
+     return "index";  
     }
 
-    @RequestMapping(value = {"/list"}, method = RequestMethod.GET)
+    @GetMapping("/list")
     public String showNotenView(Model model) {
         model.addAttribute("noten", notenService.getNotenliste());
         model.addAttribute("durchschnitt", notenService.berechneDurchschnitt());
-        return "list.html"; // Rendert die Datei src/main/resources/templates/index.html
+        return "list"; // Rendert die Datei src/main/resources/templates/index.html
     }
 
-    @RequestMapping("/add")
+    @PostMapping("/add")
     public String addNote(@RequestParam("note") Double note) {
         if(note != null && note >= 1 && note <= 6) {
             notenService.addNote(note);
@@ -46,7 +47,7 @@ public class NotenViewController {
         return "index";
     }
 
-    @RequestMapping("/delete/{id}")
+    @DeleteMapping("/delete/{id}")
     public String deleteNote(@PathVariable("id") int id) {
         List<Double> notenListe = notenService.getNotenliste();
         if(id >= 0 && id < notenListe.size()) {

@@ -1,24 +1,28 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
+
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Notenverwaltung</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='@{/styles.css}'>
+    <link rel='stylesheet' type='text/css' media='screen' th:href='@{/styles.css}'>
 </head>
+
 <body>
     <!-- Notenliste anzeigen -->
     <h2>Notenliste</h2>
     <ul>
-        <li th:each="note, itersStat: ${noten}">
+        <li th:each="note, iterStat: ${noten}">
             <span th:text="'Note ' + ${iterStat.index + 1} + ': ' + ${note}"></span>
-            <form th:action="@{/delete/{id}(id=${iterStat.index})}" method="post">
-                <input type="hidden" name="_method" value="delete">
-                <button type="submit">Löschen</button>
-            </form>
         </li>
     </ul>
-    <a href="index.html">Zur Hauptseite springen</a>
+    <a th:href="@{/index}">Delete a grade</a>
+    <!-- Durchschnitt -->
+    <h3>Durchschnitt</h3>
+    <p th:text="${durchschnitt}"></p>
+
+    <a th:href="@{/}">Zur Hauptseite springen</a>
 </body>
+
 </html>
