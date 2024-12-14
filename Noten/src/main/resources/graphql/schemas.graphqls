@@ -1,0 +1,10 @@
+# Query type defines all the read operations
+type Query {
+    getNotenliste : [Float]!
+    getDurchschnitt : Float!
+}
+
+type Mutation {
+    addNote(note : Float!) : Float!
+    deleteNote(id: ID!) : Int
+}
