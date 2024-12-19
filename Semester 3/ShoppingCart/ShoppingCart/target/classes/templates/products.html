@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tektur:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="header">
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+
+                <img src="img/logo.png" width="125px" alt="logo">
+            </div>
+
+            <div class="searchBox">
+
+                <input class="searchInput" type="text" name="" placeholder="Search something">
+                <button class="searchButton" href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="29" height="29" viewBox="0 0 29 29" fill="none">
+                        <g clip-path="url(#clip0_2_17)">
+                            <g filter="url(#filter0_d_2_17)">
+                                <path d="M23.7953 23.9182L19.0585 19.1814M19.0585 19.1814C19.8188 18.4211 20.4219 17.5185 20.8333 16.5251C21.2448 15.5318 21.4566 14.4671 21.4566 13.3919C21.4566 12.3167 21.2448 11.252 20.8333 10.2587C20.4219 9.2653 19.8188 8.36271 19.0585 7.60242C18.2982 6.84214 17.3956 6.23905 16.4022 5.82759C15.4089 5.41612 14.3442 5.20435 13.269 5.20435C12.1938 5.20435 11.1291 5.41612 10.1358 5.82759C9.1424 6.23905 8.23981 6.84214 7.47953 7.60242C5.94407 9.13789 5.08145 11.2204 5.08145 13.3919C5.08145 15.5634 5.94407 17.6459 7.47953 19.1814C9.01499 20.7168 11.0975 21.5794 13.269 21.5794C15.4405 21.5794 17.523 20.7168 19.0585 19.1814Z" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" shape-rendering="crispEdges"></path>
+                            </g>
+                        </g>
+                        <defs>
+                            <filter id="filter0_d_2_17" x="-0.418549" y="3.70435" width="29.7139" height="29.7139" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                <feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
+                                <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"></feColorMatrix>
+                                <feOffset dy="4"></feOffset>
+                                <feGaussianBlur stdDeviation="2"></feGaussianBlur>
+                                <feComposite in2="hardAlpha" operator="out"></feComposite>
+                                <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"></feColorMatrix>
+                                <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_2_17"></feBlend>
+                                <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_2_17" result="shape"></feBlend>
+                            </filter>
+                            <clipPath id="clip0_2_17">
+                                <rect width="28.0702" height="28.0702" fill="white" transform="translate(0.403503 0.526367)"></rect>
+                            </clipPath>
+                        </defs>
+                    </svg>
+
+
+                </button>
+            </div>
+
+
+            <nav>
+                <ul>
+                    <li><a href="http://localhost:8080/dashboard">Home</a></li>
+                    <li><a href="">Products</a></li>
+                    <li><a href="">About</a></li>
+                    <li><a href="">Contact</a></li>
+                    <li><a href="">Account</a></li>
+
+                    <button>
+                        <span><a href="http://localhost:8080/login"> Logout</a></span>
+                        <svg width="34" height="34" viewBox="0 0 74 74" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="37" cy="37" r="35.5" stroke="black" stroke-width="3"></circle>
+                            <path d="M25 35.5C24.1716 35.5 23.5 36.1716 23.5 37C23.5 37.8284 24.1716 38.5 25 38.5V35.5ZM49.0607 38.0607C49.6464 37.4749 49.6464 36.5251 49.0607 35.9393L39.5147 26.3934C38.9289 25.8076 37.9792 25.8076 37.3934 26.3934C36.8076 26.9792 36.8076 27.9289 37.3934 28.5147L45.8787 37L37.3934 45.4853C36.8076 46.0711 36.8076 47.0208 37.3934 47.6066C37.9792 48.1924 38.9289 48.1924 39.5147 47.6066L49.0607 38.0607ZM25 38.5L48 38.5V35.5L25 35.5V38.5Z" fill="black"></path>
+                        </svg>
+                    </button>
+                </ul>
+            </nav>
+            <img src="img/sportsbag.png" width="30px" height="30px">
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- Titel der Website -->
+        <div class="title">Sports Wear</div>
+        <!-- Filter nach Geschlecht -->
+        <div class="filter">
+            <label for="gender">Gender:</label>
+            <input type="checkbox" name="gender" id="male" value="male">Mann
+            <input type="checkbox" name="gender" id="female" value="female">Frau
+        </div>
+        <!-- Liste mit Produkten -->
+        <ul class="list">
+            <li class="item" id="product1">
+                <div class="imageContainer">
+                    <img class="common-size" id="shoeImage1" src="/img/adi_black_man.png" alt="boots">
+                </div>
+                <div class="name">Sportschuhe</div> <!-- Name anzeigen -->
+                <div class="price">99,99 €</div> <!-- Preis anzeigen -->
+                <div class="brand">Addidas</div> <!-- Marke anzeigen -->
+                <div class="gender">Man</div> <!-- Geschlecht anzeigen -->
+                <select class="colorSelect" onchange="changeImage('shoeImage1', 'product1')">
+                    <option value="black">Schwarz</option>
+                    <option value="green">Grün</option>
+                </select>
+                <!-- Button hinzufügen, der das Produkt zum Warenkorb hinzufügt -->
+                <button onclick="addToCart('Sportschuhe')">In den Warenkorb hinzufügen</button>
+            </li>
+            <li class="item" id="product2">
+                <div class="imageContainer">
+                    <img class="common-size" id="tImage" src="/img/nike_t-shirt_black_wom.png" alt="tshirt">
+                </div>
+                <div class="name">T-Shirt</div>
+                <div class="price">19,99 €</div>
+                <div class="brand">Nike</div>
+                <div class="gender">Woman</div>
+                <select class="colorSelect" onchange="changeImage('tImage', 'product2')">
+                    <option value="black">Schwarz</option>
+                    <option value="white">Weiß</option>
+                </select>
+                <!-- Button hinzufügen, der das Produkt zum Warenkorb hinzufügt -->
+                <button onclick="addToCart('T-Shirt')">In den Warenkorb hinzufügen</button>
+            </li>
+            <li class="item" id="product3">
+                <div class="imageContainer">
+                    <img class="common-size" id="hImage" src="/img/puma_hose_black_man.png" alt="Hose">
+                </div>
+                <div class="name">Hose</div> <!-- Name anzeigen -->
+                <div class="price">29,99 €</div> <!-- Preis anzeigen -->
+                <div class="brand">Puma</div> <!-- Marke anzeigen -->
+                <div class="gender">Man</div> <!-- Geschlecht anzeigen -->
+                <select class="colorSelect" onchange="changeImage('hImage','product3')">
+                    <option value="black">Schwarz</option>
+                    <option value="grey">Grau</option>
+                </select>
+
+                <!-- Button hinzufügen, der das Produkt zum Warenkorb hinzufügt -->
+                <button onclick="addToCart('Sportschuhe')">In den Warenkorb</button>
+            </li>
+            <li class="item" id="product4">
+                <div class="imageContainer">
+                    <img class="common-size" id="shoeImage2" src="/img/adi_red_wom.png" alt="bootsW">
+                </div>
+                <div class="name">Sportschuhe</div> <!-- Name anzeigen -->
+                <div class="price">89,99 €</div> <!-- Preis anzeigen -->
+                <div class="brand">Addidas</div> <!-- Marke anzeigen -->
+                <div class="gender">Woman</div> <!-- Geschlecht anzeigen -->
+                <select class="colorSelect" onchange="changeImage('shoeImage2','product4')">
+                    <option value="red">Rot</option>
+                    <option value="black">Schwarz</option>
+                </select>
+                <!-- Button hinzufügen, der das Produkt zum Warenkorb hinzufügt -->
+                <button onclick="addToCart('Sportschuhe')">In den Warenkorb</button>
+            </li>
+            <li class="item" id="product5">
+                <div class="imageContainer">
+                    <img class="common-size" id="shoeImage" src="/img/nike_t-shirt_black_man.png" alt="shirtM">
+                </div>
+                <div class="name">T-Shirt</div> <!-- Name anzeigen -->
+                <div class="price">14,99 €</div> <!-- Preis anzeigen -->
+                <div class="brand">Nike</div> <!-- Marke anzeigen -->
+                <div class="gender">Man</div> <!-- Geschlecht anzeigen -->
+
+                <select class="colorSelect" onchange="changeImage('shirtM','product5')">
+                    <option value="black">Schwarz</option>
+                    <option value="white">Weiß</option>
+                </select>
+
+                <!-- Button hinzufügen, der das Produkt zum Warenkorb hinzufügt -->
+                <button onclick="addToCart('Sportschuhe')">In den Warenkorb</button>
+            </li>
+            <li class="item" id="product6">
+                <div class="imageContainer">
+                    <img class="common-size" id="shoePhoto" src="/img/puma_hose_black_wom.png" alt="HoseW">
+                </div>
+                <div class="name">Hose</div> <!-- Name anzeigen -->
+                <div class="price">24,99 €</div> <!-- Preis anzeigen -->
+                <div class="brand">Puma</div> <!-- Marke anzeigen -->
+                <div class="gender">Woman</div> <!-- Geschlecht anzeigen -->
+
+                <select class="colorSelect" onchange="changeImage('HoseW','product6')">
+                    <option value="black">Schwarz</option>
+                    <option value="blue">Blau</option>
+                </select>
+                <!-- Button hinzufügen, der das Produkt zum Warenkorb hinzufügt -->
+                <button onclick="addToCart('Sportschuhe')">In den Warenkorb hinzufügen</button>
+            </li>
+            <li class="item" id="product7">
+                <div class="imageContainer">
+                    <img class="common-size" id="shoeImage" src="/img/WhatsApp Image 2024-01-09 at 18.34.02.jpeg" alt="Hub">
+                </div>
+                <div class="name">T-Shirt</div> <!-- Name anzeigen -->
+                <div class="price">9,99 €</div> <!-- Preis anzeigen -->
+                <div class="brand">FitnessHub</div> <!-- Marke anzeigen -->
+                <!-- Button hinzufügen, der das Produkt zum Warenkorb hinzufügt -->
+                <button onclick="addToCart('Sportschuhe')">In den Warenkorb</button>
+            </li>
+        </ul>
+    </div>
+
+    <script>
+        // Die Checkboxen für das Geschlecht auswählen
+        var maleCheckbox = document.getElementById("male");
+        var femaleCheckbox = document.getElementById("female");
+
+        // Die Listeneinträge auswählen
+        var items = document.querySelectorAll(".list li");
+
+        // Eine Funktion definieren, die die Listeneinträge filtert
+        function filterItems() {
+            // Überprüfen, welche Checkboxen ausgewählt sind
+            var maleChecked = maleCheckbox.checked;
+            var femaleChecked = femaleCheckbox.checked;
+
+            // Über jeden Listeneintrag iterieren
+            for (var i = 0; i < items.length; i++) {
+                // Den Listeneintrag auswählen
+                var item = items[i];
+
+                // Das Element auswählen, das das Geschlecht enthält
+                var genderElement = item.querySelector(".gender");
+
+                // Den Text aus dem Element extrahieren
+                var genderText = genderElement.textContent;
+
+                // Überprüfen, ob das Geschlecht mit den ausgewählten Checkboxen übereinstimmt
+                var match = (maleChecked && genderText == "Man") || (femaleChecked && genderText == "Woman") || (!maleChecked && !femaleChecked);
+
+                // Den Listeneintrag anzeigen oder ausblenden, je nachdem, ob es einen Treffer gibt oder nicht
+                if (match) {
+                    item.style.display = ""; // Den Listeneintrag anzeigen
+                } else {
+                    item.style.display = "none"; // Den Listeneintrag ausblenden
+                }
+            }
+        }
+
+        // Die Filterfunktion aufrufen, wenn eine der Checkboxen geändert wird
+        maleCheckbox.addEventListener("change", filterItems);
+        femaleCheckbox.addEventListener("change", filterItems);
+    </script>
+    <script>
+        // Hier fügen Sie den JavaScript-Code Ihrer Kollegin hinzu, mit Anpassungen
+        var images = {
+            'product1': {
+                'black': 'adi_black_man.png',
+                'green': 'adi_green_man.png'
+            },
+            'product2': {
+                'black': 'nike_t-shirt_black_wom.png',
+                'white': 'nike_t-shirt_wom.png'
+            },
+            'product3': {
+                'black': 'puma_hose_black_man.png',
+                'grey': 'puma_hose_grey_man.png'
+            },
+            'product4': {
+                'red': 'adi_red_wom.png',
+                'black': 'adi_black_wom.png'
+            },
+            'product5': {
+                'black': 'nike_t-shirt_black_man.png',
+                'white': 'nike_t-shirt_white_man.png'
+            },
+            'product6': {
+                'black': 'puma_hose_black_wom.png',
+                'blue': 'puma_hose_blau_wom.png'
+            },
+            'product7': {
+                'black': 'WhatsApp Image 2024-01-09 at 18.34.02.jpeg'
+            }
+            // Fügen Sie hier andere Produkte hinzu
+        };
+
+        function changeImage(imageId, productId) {
+            var colorSelect = document.getElementById(productId).getElementsByClassName('colorSelect')[0];
+            var shoeImage = document.getElementById(productId).getElementsByClassName('common-size')[0];
+            var selectedColor = colorSelect.value;
+
+            // Überprüfen, ob das Produkt und die ausgewählte Farbe vorhanden sind
+            if (images[productId] && images[productId][selectedColor]) {
+                shoeImage.src = '/img/' + images[productId][selectedColor];
+            } else {
+                console.error('Bild nicht gefunden:', productId, selectedColor);
+            }
+        }
+
+        function addToCart(productName) {
+            // Hier können Sie die Logik zum Hinzufügen zum Warenkorb implementieren
+            var productId; // Setzen Sie die Produkt-ID entsprechend Ihrer Datenstruktur
+            var productImage; // Setzen Sie das Produktbild entsprechend Ihrer Datenstruktur
+
+            // Rufen Sie Ihre vorhandene addToCart-Funktion auf
+            addToCart(productName, productId, productImage);
+        }
+    </script>
+
+</body>
+
+</html>

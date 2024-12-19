@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Warenkorb</title>
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+<div id="app">
+    <h1>Warenkorb</h1>
+    <button onclick="getAllProducts()">Produkte</button>
+    <button onclick="showShoppingCart()">Warenkorb</button>
+    <div id="products"></div>
+    <div id="shoppingCart" style="display: none;">
+        <h2>Warenkorb</h2>
+        <table>
+            <thead>
+            <tr>
+                <th>Produkt</th>
+                <th>Einzelpreis</th>
+                <th>Menge</th>
+                <th>Gesamtpreis</th>
+            </tr>
+            </thead>
+            <tbody id="cartItems"></tbody>
+        </table>
+        <p>Gesamtpreis: <span id="totalPrice">0</span></p>
+        <button onclick="placeOrder()">Bestellung Abschließen</button>
+        <button onclick="cancelOrder()">Bestellung Abbrechen</button>
+    </div>
+</div>
+
+<script src="main.js"></script>
+</body>
+</html>
